@@ -1,0 +1,45 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #000000, #c209c2, #000000); /* Gradiente animado */
+    background-size: 300% 300%; /* Amplia o gradiente para criar movimento */
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    margin: 0; /* Remove margens */
+    animation: moverCores 5s infinite alternate; /* Adiciona a animação */
+}
+
+@keyframes moverCores {
+    0% {
+        background-position: 0% 50%; /* Gradiente inicia no começo */
+    }
+    100% {
+        background-position: 100% 50%; /* Gradiente termina no final */
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #000000;
+    h1 {
+        color: #ffffff;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
